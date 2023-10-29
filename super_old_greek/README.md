@@ -18,3 +18,7 @@ I would provide a test file but since copyright isn't my expertise I have decide
 4. Profit! (Wait, what?)
 
 ## Languages I've done this in...
+
+### NodeJS/Ecmascript
+
+This one isn't that difficult. For the sake of sanity I removed the newline from the correct output file that my editor automatically adds. Before any text replacement can happen the string needs to be normalized to `NFD` (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize). Essentially, the string normalization turns the accent marks into characters instead of them being characters with accents. With the string normalized, removing accent marks as well as all non Greek characters eliminates all that needs to be removed. After that all that is left is to uppercase the string. Easy enough I guess, the regex is doing the heavy lifting here. To look at the unicode reference I would suggest, https://en.wikipedia.org/wiki/Greek_and_Coptic , as a good start.
