@@ -4,17 +4,17 @@ const file = await open('../test_text.txt');
 const correctFile = await open('../correct_output.txt');
 
 const text = await file.readFile({ encoding: 'utf8' });
-let correctText = await correctFile.readFile({ encoding: 'utf8' });
-
-// GOT TO REMOVE THAT NEWLINE FROM THE STRING.
-correctText = correctText.replace(/[\n\r]/g, '');
+const correctText = await correctFile.readFile({ encoding: 'utf8' });
 
 file.close();
 correctFile.close();
 
 console.log(`Staring with text: ${text}`);
 
-const modifiedText = text.normalize('NFD').replace(/[\u0300-\u036f]|[^\u0391-\u03C9]/g, '').toUpperCase();
+const modifiedText = text
+      .normalize('NFD')
+      .replace(/(?!\n)([\u0300-\u036F]|[^\u0370-\u03FF]|͵)/g, '')
+      .toUpperCase();
 
 console.log(`Modified text to: ${modifiedText}`);
 

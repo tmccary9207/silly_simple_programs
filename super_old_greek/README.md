@@ -8,13 +8,13 @@ Good question! It should remove all space, punctuation, periods, semicolons, apo
 
 ## Test File?
 
-I would provide a test file but since copyright isn't my expertise I have decided to withdraw adding one to my repo for this program. I, however, will recommend Perseus https://www.perseus.tufts.edu/hopper/ as a good source for materials.
+For a test file I found every Greek accented letter and regular letter as well as the capitalized form. With all those letters I put them into `test_text.txt` and what the modified text should be after running the program in `correct_output.txt`.
 
 ## What should the procedures be?
 
-1. Replace unicode characters `\u0300` to `\u036f` with nothing.
+1. Replace unicode characters `\u0370` to `\u03FF` with nothing.
 2. Replace all non letters with nothing.
-3. Uppercase all letters remaing.
+3. Uppercase all letters remaining.
 4. Profit! (Wait, what?)
 
 ## Languages I've done this in...
