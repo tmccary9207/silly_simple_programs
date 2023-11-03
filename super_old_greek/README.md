@@ -22,3 +22,7 @@ For a test file I found every Greek accented letter and regular letter as well a
 ### NodeJS/Ecmascript
 
 This one isn't that difficult. For the sake of sanity I removed the newline from the correct output file that my editor automatically adds. Before any text replacement can happen the string needs to be normalized to `NFD` (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize). Essentially, the string normalization turns the accent marks into characters instead of them being characters with accents. With the string normalized, removing accent marks as well as all non Greek characters eliminates all that needs to be removed. After that all that is left is to uppercase the string. Easy enough I guess, the regex is doing the heavy lifting here. To look at the unicode reference I would suggest, https://en.wikipedia.org/wiki/Greek_and_Coptic , as a good start.
+
+### Python3
+
+I don't write enough Python3 code in practice so go easy on me for this one. Turns out the `unicodedata` module is what Python3 uses to normalize strings. From there it was actually figuring out the Regex syntax for Python's `re` module. I just wish I could do the slash, pattern, slash for it but that's a bit too picky. Overall, easy enough.
