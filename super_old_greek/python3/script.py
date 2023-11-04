@@ -20,4 +20,4 @@ modified_text = sub(
 
 print(f"Modified text to: {modified_text}")
 
-print(f"Are the modified text and correct text the same? {modified_text == correct_text}")
+print(f"Are the correct text and modified text the same? {modified_text == correct_text}")

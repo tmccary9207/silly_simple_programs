@@ -18,4 +18,4 @@ const modifiedText = text
 
 console.log(`Modified text to: ${modifiedText}`);
 
-console.log(`Are they the same? ${modifiedText === correctText}`);
+console.log(`Are the correct text and modified text the same? ${modifiedText === correctText}`);
