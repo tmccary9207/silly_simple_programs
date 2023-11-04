@@ -26,3 +26,7 @@ This one isn't that difficult. For the sake of sanity I removed the newline from
 ### Python3
 
 I don't write enough Python3 code in practice so go easy on me for this one. Turns out the `unicodedata` module is what Python3 uses to normalize strings. From there it was actually figuring out the Regex syntax for Python's `re` module. I just wish I could do the slash, pattern, slash for it but that's a bit too picky. Overall, easy enough.
+
+### Ruby
+
+The Ruby version seems too easy to me. Reading a file was painless, just `File.read 'blah.txt'` is enough to get the whole file as a String object. From there the String object has a normalize function and an automatically `g` applied regex substitute function. Three function calls and everything is done. Ah, you smell that? Programmer happiness as promised.
